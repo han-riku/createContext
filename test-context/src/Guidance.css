@@ -1,0 +1,8 @@
+.guidance {
+    display: flex;
+    flex-direction: column;
+}
+
+.guidance button {
+    margin-top: 10px;
+}
