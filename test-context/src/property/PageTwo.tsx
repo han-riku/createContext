@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+
+import { PropertyContext } from "./UsePropertyContextProvider";
 
 export default function PageTwo() {
-    const navigate = useNavigate();
-    const [phone, setPhone] = useState("");
+    const { propertyForm, updatePropertyForm } = useContext(PropertyContext)
 
     return (
         <>
@@ -13,14 +13,14 @@ export default function PageTwo() {
                 <input
                     type="text"
                     id="phone"
+                    value={propertyForm.phone}
                     onChange={(e) => {
-                        setPhone(e.target.value);
-                        console.log(phone);
+                        updatePropertyForm({ ...propertyForm, phone: e.target.value })
                     }}
                 />
             </div>
             <div>
-                <button onClick={() => navigate("/uploadForm/propertyComplete")}>提出</button>
+                <button onClick={() => location.replace("/uploadForm/propertyComplete")}>提出</button>
             </div>
         </>
     );

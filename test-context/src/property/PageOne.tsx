@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
+
+import { PropertyContext } from "./UsePropertyContextProvider";
 
 export default function PageOne() {
     const navigate = useNavigate()
-
-    const [name, setName] = useState("")
+    const { propertyForm, updatePropertyForm } = useContext(PropertyContext)
 
     return (
         <>
@@ -15,9 +16,9 @@ export default function PageOne() {
                     type="text"
                     id="name"
                     name="name"
+                    value={propertyForm.name}
                     onChange={(e) => {
-                        setName(e.target.value)
-                        console.log(name)  
+                        updatePropertyForm({ ...propertyForm, name: e.target.value })
                     }}
                 />
             </div>
