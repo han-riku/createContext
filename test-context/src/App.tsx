@@ -4,7 +4,7 @@ import Guidance from './Guidance'
 import PageOne from './property/PageOne'
 import PageTwo from './property/PageTwo'
 
-import { RouterProvider, createBrowserRouter, Route, Routes } from 'react-router'
+import { RouterProvider, createBrowserRouter, Route, Routes } from 'react-router-dom'
 
 function Root() {
   return (
