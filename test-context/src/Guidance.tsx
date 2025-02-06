@@ -5,8 +5,9 @@ export default function Guidance() {
 
     return (
         <div>
-            <h1>Guidance</h1>
+            <h1>ご案内</h1>
             <button onClick={() => navigate("/uploadForm/pageOne")}>物件情報登録</button>
+            <button onClick={() => navigate("/uploadForm/counselingPageOne")}>カウンセリング情報登録</button>
         </div>
     );
 }

@@ -10,7 +10,7 @@ export default function PageOne() {
     return (
         <>
             <div>
-                <h1>Page One</h1>
+                <h1>Property Page One</h1>
                 <label htmlFor="name">Name:</label>
                 <input
                     type="text"

@@ -8,7 +8,7 @@ export default function PageTwo() {
     return (
         <>
             <div>
-                <h1>Page Two</h1>
+                <h1>Property Page Two</h1>
                 <label htmlFor="phone">電話番号:</label>
                 <input
                     type="text"
