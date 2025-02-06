@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 
 export default function PageOne() {
+    const navigate = useNavigate()
+
     return (
         <>
             <div>
@@ -8,7 +11,7 @@ export default function PageOne() {
                 <input type="text" id="name" name="name" />
             </div>
             <div>
-                <button>次へ</button>
+                <button onClick={() => navigate("/uploadForm/pageTwo")}>次へ</button>
             </div>
         </>
     );
