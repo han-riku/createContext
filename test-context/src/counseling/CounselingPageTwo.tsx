@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-// import { useContext } from "react";
+import { useContext } from "react";
 
-// import { PropertyContext } from "./UsePropertyContextProvider";
+import { CounselingContext } from "../contexts/counselingContext/counselingContext";
 
 export default function CounselingPageTwo() {
     const navigate = useNavigate()
+    const { counselingForm, updateCounselingForm } = useContext(CounselingContext)
 
     return (
         <>
@@ -15,6 +16,8 @@ export default function CounselingPageTwo() {
                     type="text"
                     id="sex"
                     name="sex"
+                    value={counselingForm.sex}
+                    onChange={(e) => updateCounselingForm({ ...counselingForm, sex: e.target.value })}
                 />
             </div>
             <div>
