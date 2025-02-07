@@ -1,7 +1,8 @@
 import './App.css'
 
 import Guidance from './Guidance'
-import UsePropertyContextProvider from './contexts/propertyContext/UsePropertyContextProvider'
+import PropertyContextProvider from './contexts/propertyContext/PropertyContextProvider'
+import CounselingContextProvider from './contexts/counselingContext/CounselingContextProvider'
 import PageOne from './property/PageOne'
 import PageTwo from './property/PageTwo'
 import PropertyComplete from './property/PropertyComplete'
@@ -14,21 +15,23 @@ import { RouterProvider, createBrowserRouter, Route, Routes } from 'react-router
 
 function Root() {
   return (
-    <UsePropertyContextProvider>
-      <Routes>
-        <Route path="uploadForm">
-          <Route path="guidance" element={<Guidance />} />
-          <Route path="pageOne" element={<PageOne />} />
-          <Route path="pageTwo" element={<PageTwo />} />
-          <Route path="propertyComplete" element={<PropertyComplete />} />
-          <Route path="counselingPageOne" element={<CounselingPageOne />} />
-          <Route path="counselingPageTwo" element={<CounselingPageTwo />} />
-          <Route path="counselingPageThree" element={<CounselingPageThree />} />
-          <Route path="counselingComplete" element={<CounselingComplete />} />
-        </Route>
-        <Route path="*" element={<div>Not Found</div>} />
-      </Routes>
-    </UsePropertyContextProvider>
+    <PropertyContextProvider>
+      <CounselingContextProvider>
+        <Routes>
+          <Route path="uploadForm">
+            <Route path="guidance" element={<Guidance />} />
+            <Route path="pageOne" element={<PageOne />} />
+            <Route path="pageTwo" element={<PageTwo />} />
+            <Route path="propertyComplete" element={<PropertyComplete />} />
+            <Route path="counselingPageOne" element={<CounselingPageOne />} />
+            <Route path="counselingPageTwo" element={<CounselingPageTwo />} />
+            <Route path="counselingPageThree" element={<CounselingPageThree />} />
+            <Route path="counselingComplete" element={<CounselingComplete />} />
+          </Route>
+          <Route path="*" element={<div>Not Found</div>} />
+        </Routes>
+      </CounselingContextProvider>
+    </PropertyContextProvider>
   )
 }
 

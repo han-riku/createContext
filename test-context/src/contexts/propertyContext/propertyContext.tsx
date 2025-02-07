@@ -5,7 +5,7 @@ export type Property = {
     phone: string;
 };
 
-export interface PropertyContextProps {
+export type PropertyContextProps ={
     propertyForm: Property;
     updatePropertyForm: (value: Property) => void;
 }

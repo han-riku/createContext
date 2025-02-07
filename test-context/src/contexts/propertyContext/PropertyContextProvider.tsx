@@ -4,7 +4,7 @@ import { Property, PropertyContext } from './propertyContext';
 
 
 // グローバルなStateを提供するProvider
-export default function UsePropertyContextProvider({ children }: { children: React.ReactNode }) {
+export default function PropertyContextProvider({ children }: { children: React.ReactNode }) {
     const [propertyForm, setPropertyForm] = useState<Property>({
         name: "",
         phone: ""
