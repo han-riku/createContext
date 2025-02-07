@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
-import { PropertyContext } from "./UsePropertyContextProvider";
+import { PropertyContext } from "../contexts/propertyContext/propertyContext";
 
 export default function PageOne() {
     const navigate = useNavigate()

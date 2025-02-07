@@ -1,7 +1,7 @@
 import './App.css'
 
 import Guidance from './Guidance'
-import UsePropertyContextProvider from './property/UsePropertyContextProvider'
+import UsePropertyContextProvider from './contexts/propertyContext/UsePropertyContextProvider'
 import PageOne from './property/PageOne'
 import PageTwo from './property/PageTwo'
 import PropertyComplete from './property/PropertyComplete'
@@ -36,11 +36,21 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <Root />
+  }],
+  {
+    future: {
+      v7_relativeSplatPath: true,
+    },
   }
-])
+)
 
 function App() {
-  return <RouterProvider router={router} />
+  return <RouterProvider
+    router={router}
+    future={{
+      v7_startTransition: true,
+    }}
+  />
 }
 
 export default App

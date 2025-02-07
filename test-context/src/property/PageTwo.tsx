@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { PropertyContext } from "./UsePropertyContextProvider";
+import { PropertyContext } from "../contexts/propertyContext/propertyContext";
 
 export default function PageTwo() {
     const { propertyForm, updatePropertyForm } = useContext(PropertyContext)
