@@ -1,8 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-import { Button } from '@mui/material';
-
 import './Guidance.css'
 
 export default function Guidance() {
