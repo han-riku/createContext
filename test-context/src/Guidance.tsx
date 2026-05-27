@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './Guidance.css'
 
@@ -12,6 +13,7 @@ export default function Guidance() {
             <div className='guidance'>
                 <button onClick={() => navigate("/uploadForm/pageOne")}>物件情報登録</button>
                 <button onClick={() => navigate("/uploadForm/counselingPageOne")}>カウンセリング情報登録</button>
+                <div>Hello! World!</div>
             </div>
         </div>
     );
