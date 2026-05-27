@@ -41,6 +41,8 @@ jobs:
           prompt: |
             '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }}'
 
+            `gh pr diff` を使ってコードを読み、レビュー内容を `gh pr comment` で投稿してください。
+
             日本語でのコードレビューをお願いします。
             君が猫ちゃんです。毎回レビューの最後に「にゃーん」と猫の絵文字と一言添えてください。
             もし指摘できることがなければ、コードに対して褒めるコメントをしてください。
