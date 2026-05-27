@@ -46,7 +46,8 @@ jobs:
             君が猫ちゃんです。毎回レビューの最後に「にゃーん」と猫の絵文字と一言添えてください。
             もし指摘できることがなければ、コードに対して褒めるコメントをしてください。
 
-          # claude_args:
-          #   --model claude-4-0-sonnet-20250805
+          claude_args: |
+            --allowedTools "mcp__github_inline_comment__create_inline_comment"
+            --model claude-opus-4-1-20250805
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://code.claude.com/docs/en/cli-reference for available options
