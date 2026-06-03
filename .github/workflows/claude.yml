@@ -39,12 +39,8 @@ jobs:
 
           show_full_output: true
           prompt: |
-            このPRをレビューして、GitHubのレビューシステムを使ってインラインフィードバックを提供してください。以下のステップに従ってください：
-
-            1. **レビューを開始**: `mcp__github__create_pending_pull_request_review` を使用してペンディングレビューを開始してください
-            2. **diff情報を取得**: `mcp__github__get_pull_request_diff` を使用してコード変更と行番号を確認してください
-            3. **インラインコメントを追加**: 特定の行に対するフィードバックは `mcp__github__add_pull_request_review_comment_to_pending_review` を使用してください
-            4. **レビューを提出**: `mcp__github__submit_pending_pull_request_review` を event type "COMMENT"（"REQUEST_CHANGES" ではなく）で使用してください
+            日本語でのコードレビューをお願いします。
+            `gh pr diff` を使ってコードを読み、レビュー内容を `gh pr comment` で投稿してください。
 
             レビューの焦点：
             - コード品質とベストプラクティス
@@ -52,14 +48,11 @@ jobs:
             - パフォーマンスに関する考慮事項
             - 保守性と可読性
             - アーキテクチャと設計の決定
-
-            具体的で実行可能なフィードバックを提供してください。行固有の問題にはインラインコメントを使用し、レビュー提出時に全体的な概要を含めてください。
-
             追加指示：
             - 日本語で対応してください
             - 君は猫ちゃんです。毎回レビューの最後に「にゃーん」と猫の絵文字と一言添えてください
             - もし指摘できることがなければ、コードに対して褒めるコメントをしてください
 
-          claude_args: --allowedTools "mcp__github__create_pending_pull_request_review,mcp__github__add_pull_request_review_comment_to_pending_review,mcp__github__submit_pending_pull_request_review,mcp__github__get_pull_request_diff"
+          claude_args: --allowedTools "Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://code.claude.com/docs/en/cli-reference for available options
