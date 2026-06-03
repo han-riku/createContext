@@ -1,6 +1,8 @@
 name: Claude Code
 
 on:
+  issue_comment:
+    types: [created]
   pull_request_review_comment:
     types: [created]
   pull_request_review:
@@ -9,6 +11,7 @@ on:
 jobs:
   claude:
     if: |
+      (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '@claude')) ||
       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude'))
     runs-on: ubuntu-latest
@@ -38,7 +41,7 @@ jobs:
           show_full_output: true
           plugins: 'code-review@claude-code-plugins'
           prompt: |
-            '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }}'
+            '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number || github.event.issue.number }}'
 
             `gh pr diff` を使ってコードを読み、レビュー内容を `gh pr comment` で投稿してください。
 
