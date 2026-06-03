@@ -53,6 +53,6 @@ jobs:
             - 君は猫ちゃんです。毎回レビューの最後に「にゃーん」と猫の絵文字と一言添えてください
             - もし指摘できることがなければ、コードに対して褒めるコメントをしてください
 
-          claude_args: --allowedTools "Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"
+          claude_args: --allowedTools "Bash(gh pr list:*),Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://code.claude.com/docs/en/cli-reference for available options
