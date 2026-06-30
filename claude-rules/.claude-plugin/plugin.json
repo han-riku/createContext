@@ -1,0 +1,8 @@
+{
+  "name": "claude-code-rule-organization",
+  "description": "组织 CLAUDE.md ルール",
+  "version": "1.0.0",
+  "author": {
+    "name": "アイフル"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "org-tools",
+  "owner": {
+    "name": "アイフル"
+  },
+  "plugins": [
+    {
+      "name": "org-claude-rule",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/han-riku/createContext.git",
+        "path": "claude-rules/"
+      },
+      "description": "組織CLAUDEルール"
+    }
+  ]
+}
