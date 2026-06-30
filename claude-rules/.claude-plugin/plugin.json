@@ -1,6 +1,6 @@
 {
   "name": "claude-code-rule-organization",
-  "description": "组织 CLAUDE.md ルール",
+  "description": "Claude Code組織ルール",
   "version": "2.0.0",
   "author": {
     "name": "アイフル"
