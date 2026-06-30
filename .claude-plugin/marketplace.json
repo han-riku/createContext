@@ -1,5 +1,5 @@
 {
-  "name": "org-tools",
+  "name": "org-rule",
   "owner": {
     "name": "アイフル"
   },
@@ -9,7 +9,7 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/han-riku/createContext.git",
-        "path": "claude-rules/"
+        "path": "claude-rules"
       },
       "description": "組織CLAUDEルール"
     }
