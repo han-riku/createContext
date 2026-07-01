@@ -1,8 +1,5 @@
 {
-  "name": "claude-code-rule-organization",
+  "name": "org-claude-rule",
   "description": "Claude Code組織ルール",
-  "version": "2.0.0",
-  "author": {
-    "name": "アイフル"
-  }
+  "version": "1.0.0"
 }
