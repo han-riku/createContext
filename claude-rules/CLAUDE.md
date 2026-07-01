@@ -1,3 +1,5 @@
+echo "🔍 Plugin LOADED from: han-riku/createContext"
+
 # CLAUDE.md
 
 ## 作業範囲・判断基準
